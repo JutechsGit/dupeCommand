@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "dupecommand",
+  "version": "${version}",
+  "name": "dupeCommand",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/dupecommand/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "org.example.dupecommand.Main"
+    ]
+  },
+  "mixins": [
+    "dupecommand.mixins.json",
+    {
+      "config": "dupecommand.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
